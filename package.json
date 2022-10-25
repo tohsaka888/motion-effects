@@ -1,25 +1,53 @@
 {
-  "name": "motion-effects",
+  "name": "motion-effect",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:commonjs": "npx swc motion-effect -C module.type=commonjs -d lib/commonjs --config-file .swcrc",
+    "build:module": "npx swc motion-effect -C module.type=es6 -d lib/module --config-file .swcrc",
+    "build:typescript": "npx tsc --project ./tsconfig.typescript.json",
+    "build:package": "pnpm build:commonjs && pnpm build:module && pnpm build:typescript",
+    "publish:package": "pnpm build:package && pnpm publish"
   },
   "dependencies": {
-    "framer-motion": "^7.6.1",
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "framer-motion": "^7.6.1"
   },
   "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.3.10",
     "@types/node": "18.11.2",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "typescript": "4.8.4"
-  }
+  },
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "source": "motion-effect/index.tsx",
+  "files": [
+    "lib",
+    "motion-effect",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tohsaka888/motion-effects.git"
+  },
+  "keywords": [
+    "knowledge-graph"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tohsaka888/motion-effects/issues"
+  },
+  "homepage": "https://github.com/tohsaka888/motion-effects/"
 }
