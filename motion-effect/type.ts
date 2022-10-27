@@ -7,6 +7,7 @@ export type AlbumProps = {
   subText: React.ReactNode;
   tag?: string;
   duration?: number;
+  shadow?: [number, number];
 } & HTMLMotionProps<"div">;
 
 export type TypingProps = {
