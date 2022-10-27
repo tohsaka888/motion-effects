@@ -34,7 +34,6 @@ const Home: NextPage = () => {
         textStyle={{
           fontSize: "2rem",
           fontWeight: "bold",
-          letterSpacing: "1px",
         }}
         cursor={
           <div
@@ -42,7 +41,6 @@ const Home: NextPage = () => {
               fontSize: "2rem",
               fontWeight: "bolder",
               marginBottom: "2px",
-              marginLeft: "8px",
             }}
           >
             |
