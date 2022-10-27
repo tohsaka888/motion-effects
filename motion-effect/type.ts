@@ -15,4 +15,5 @@ export type TypingProps = {
   conatinerStyle?: CSSProperties;
   textStyle?: CSSProperties;
   cursor?: React.ReactNode;
+  deleteDelay?: number;
 };
