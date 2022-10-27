@@ -8,6 +8,7 @@ function Album({
   subText,
   tag,
   duration = 0.6,
+  shadow = [0.5, 1],
   ...props
 }: AlbumProps) {
   const [isHover, setIsHover] = useState<boolean>(false);
@@ -15,6 +16,7 @@ function Album({
     width: number;
     height: number;
   }>({ width: 0, height: 0 });
+  const [from, to] = shadow;
 
   const containerRef = useRef<HTMLDivElement>(null!);
 
@@ -71,7 +73,7 @@ function Album({
           width: shadowSize.width,
           height: shadowSize.height,
           position: "absolute",
-          opacity: isHover ? 1 : 0.5,
+          opacity: isHover ? to : from,
           borderRadius: "3px",
           background:
             "linear-gradient(rgba(0,0,0,0) 0%,rgba(0,0,0,.25) 70%,rgba(0,0,0,.65) 100%)",
@@ -126,7 +128,7 @@ function Album({
         {/* children */}
         <motion.div
           animate={{
-            scale: isHover ? 1.05 : 1,
+            scale: isHover ? 1.1 : 1,
           }}
           transition={{
             duration,
