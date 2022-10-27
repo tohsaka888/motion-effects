@@ -9,6 +9,7 @@ function Album({
   tag,
   duration = 0.6,
   shadow = [0.5, 1],
+  scaleSize = 1.1,
   ...props
 }: AlbumProps) {
   const [isHover, setIsHover] = useState<boolean>(false);
@@ -128,7 +129,7 @@ function Album({
         {/* children */}
         <motion.div
           animate={{
-            scale: isHover ? 1.1 : 1,
+            scale: isHover ? scaleSize : 1,
           }}
           transition={{
             duration,

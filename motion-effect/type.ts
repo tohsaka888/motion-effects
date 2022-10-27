@@ -8,6 +8,7 @@ export type AlbumProps = {
   tag?: string;
   duration?: number;
   shadow?: [number, number];
+  scaleSize?: number;
 } & HTMLMotionProps<"div">;
 
 export type TypingProps = {
