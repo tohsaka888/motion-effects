@@ -12,6 +12,7 @@ function Typing({
 }: TypingProps) {
   const [characters, setCharacters] = useState<string[]>([]);
 
+  // calculate the speed of the character movement
   const typingSpeend = useMemo(() => {
     return speed <= 0 ? 1 : 1 / speed;
   }, [speed]);
@@ -23,7 +24,6 @@ function Typing({
 
   useEffect(() => {
     const texts = text.split("");
-
     if (flag) {
       inputRef.current = window.setInterval(() => {
         if (index === texts.length - 1) {
