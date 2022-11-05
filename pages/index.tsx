@@ -1,57 +1,37 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import { Album, Typing } from "../motion-effect";
+import { AntMotion, Typing } from "../motion-effect";
+
+const config = [
+  {
+    pic: "https://zos.alipayobjects.com/rmsportal/ogXcvssYXpECqKG.png",
+    // map: "https://zos.alipayobjects.com/rmsportal/HfBaRfhTkeXFwHJ.png",
+    color: "#FFF43D",
+    background: "#F6B429",
+  },
+  {
+    pic: "https://zos.alipayobjects.com/rmsportal/iCVhrDRFOAJnJgy.png",
+    // map: "https://zos.alipayobjects.com/rmsportal/XRfQxYENhzbfZXt.png",
+    color: "#FF4058",
+    background: "#FC1E4F",
+  },
+  {
+    pic: "https://zos.alipayobjects.com/rmsportal/zMswSbPBiQKvARY.png",
+    // map: "https://zos.alipayobjects.com/rmsportal/syuaaBOvttVcNks.png",
+    color: "#9FDA7F",
+    background: "#64D487",
+  },
+];
 
 const Home: NextPage = () => {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <Album
-          style={{ margin: "8px" }}
-          duration={0.4}
-          shadow={[0.5, 1]}
-          text={
-            <div style={{ color: "#fff", fontSize: "1.3rem" }}>
-              {"Umi4 正式版发布"}
-            </div>
-          }
-          tag={"推广"}
-          subText={
-            <div style={{ color: "#fff", fontSize: "8px" }}>
-              {"Umi4现在可以在npm上使用了!"}
-            </div>
-          }
-        >
-          <Image
-            src="https://reactjs.org/logo-og.png"
-            alt="Umi 4 正式版发布"
-            width={650}
-            height={350}
-          />
-        </Album>
-        <Album
-          style={{ margin: "8px" }}
-          duration={0.4}
-          shadow={[0.3, 0.5]}
-          text={
-            <div style={{ color: "#fff", fontSize: "1.3rem" }}>
-              {"Umi4 正式版发布"}
-            </div>
-          }
-          tag={"推广"}
-          subText={
-            <div style={{ color: "#fff", fontSize: "8px" }}>
-              {"Umi4现在可以在npm上使用了!"}
-            </div>
-          }
-        >
-          <Image
-            src="https://gw.alipayobjects.com/zos/bmw-prod/5741382d-cc22-4ede-b962-aea287a1d1a1/l4nq43o8_w2646_h1580.png"
-            alt="Umi 4 正式版发布"
-            width={650}
-            height={380}
-          />
-        </Album>
+        <AntMotion.DetailSwitch
+          width={"600px"}
+          height={"350px"}
+          config={config}
+        />
       </div>
       <Typing
         text={"Hello, I am Tohsaka888!"}
