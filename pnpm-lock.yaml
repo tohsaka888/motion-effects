@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@swc/cli': ^0.1.57
   '@swc/core': ^1.3.10
-  '@types/node': 18.11.9
+  '@types/node': 18.19.59
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   eslint: 8.27.0
@@ -20,7 +20,7 @@ dependencies:
 devDependencies:
   '@swc/cli': 0.1.57_@swc+core@1.3.10
   '@swc/core': 1.3.10
-  '@types/node': 18.11.9
+  '@types/node': 18.19.59
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   eslint: 8.27.0
@@ -486,8 +486,10 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node/18.11.9:
-    resolution: {integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==}
+  /@types/node/18.19.59:
+    resolution: {integrity: sha512-vizm2EqwV/7Zay+A6J3tGl9Lhr7CjZe2HmWS988sefiEmsyP9CeXEleho6i4hJk/8UtZAo0bWN4QPZZr83RxvQ==}
+    dependencies:
+      undici-types: 5.26.5
     dev: true
 
   /@types/prop-types/15.7.5:
@@ -2141,6 +2143,10 @@ packages:
       has-bigints: 1.0.2
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
+    dev: true
+
+  /undici-types/5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
 
   /uri-js/4.4.1:
